@@ -51,5 +51,8 @@ jobs:
       - name: Run tests 🧪
         run: yarn test
 
-      - name: Code coverage
-        uses: codecov/codecov-action@v1.0.12
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: coverage\lcov-report\index.html
